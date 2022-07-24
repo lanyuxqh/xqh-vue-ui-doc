@@ -1,7 +1,9 @@
 <template>
   <div class="demo-block" :class="[blockClass, { 'hover': hovering }]" @mouseenter="hovering = true" @mouseleave="hovering = false">
     <div style="padding:24px">
-      <slot name="source"></slot>
+      <ClientOnly>
+        <slot name="source"></slot>
+      </ClientOnly>
     </div>
     <div class="meta" ref="meta">
       <div class="description" v-if="$slots.default">
@@ -38,7 +40,7 @@ export default {
       }
     };
   },
-  mounted(){
+  mounted () {
     console.log(1)
     console.log(this.$slots)
   },
