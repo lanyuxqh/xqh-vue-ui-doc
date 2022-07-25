@@ -41,4 +41,4 @@ import { xButton, xInput } from 'xqh-vue-ui'
 <x-button type="primary" shape="square" icon="search"></x-button>
 ```
 
-github action test
+github actions test
