@@ -8,17 +8,12 @@ jobs:
     runs-on: ubuntu-latest   // 使用 ubuntu 服务器
     steps:
       - name: Checkout
-        uses: actions/checkout@v2.3.1   
-        with: 
-          persist-credentials: false
-      - name: install and build
-        run:         // 这里执行 安装 打包
-          npm install
-          npm run docs:build
+        uses: actions/checkout@master
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@3.5.9  // 引用别人的部署插件
-        with: 
-          ACCESS_TOKEN: ${{ secrets.xqh-vue-ui-doc }}   // 这里需要设置成你的 token
+      - name: Build and Deploy
+        uses: JamesIves/github-pages-deploy-action@master  // 引用别人的部署插件
+        env: 
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}   // 这里需要设置成你的 token
           BRANCH: gh-pages
           FOLDER: docs/.vuepress/dist
+          BUILD_SCRIPT: npm install && npm run docs:build
