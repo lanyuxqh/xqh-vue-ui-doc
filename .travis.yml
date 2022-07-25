@@ -5,6 +5,7 @@ install:
   - npm install
 script:
   - npm run docs:build
+  - npm run deploy
 deploy:
   provider: pages
   skip_cleanup: true
