@@ -10,14 +10,8 @@ npm run docs:build
 cd docs/.vuepress/dist
 
 git init
-# git checkout --orphan gh-pages
-git add .
+git add -A
 git commit -m '部署静态页面'
-# git remote add origin git@github.com:lanyuxqh/xqh-vue-ui-doc.git
-# git push origin gh-pages
-
-
-# 如果发布到 https://<USERNAME>.github.io  填写你刚刚创建的仓库地址
 git push -f git@github.com:lanyuxqh/xqh-vue-ui-doc.git master:gh-pages
 
 cd -

@@ -40,3 +40,5 @@ import { xButton, xInput } from 'xqh-vue-ui'
 <x-button type="default" status="success">success</x-button>
 <x-button type="primary" shape="square" icon="search"></x-button>
 ```
+
+test Travis CI
