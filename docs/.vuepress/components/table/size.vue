@@ -1,13 +1,15 @@
 <template>
-  <div class="table-basic">
-    <x-table :options="tableOptions1"></x-table>
+  <div class="table-size">
+    <x-table :options="tableOptions2" size="sm"></x-table>
+    <br>
+    <x-table :options="tableOptions2" size="xs"></x-table>
   </div>
 </template>
 <script>
 export default {
   data () {
     return {
-      tableOptions1: {
+      tableOptions2: {
         fileds: [
           { field: 'id', title: 'ID', align: 'center' },
           { field: 'name', title: '姓名', align: 'center' },
