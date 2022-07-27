@@ -1,5 +1,7 @@
+# name字段，表示 workflow 的名称。如果省略该字段，默认为当前 workflow 的文件名。
 name: docs
 
+# on字段，指定触发 workflow 的条件，通常是某些事件。
 on:
   # 每当 push 到 main 分支时触发部署
   push:
@@ -7,10 +9,13 @@ on:
   # 手动触发部署
   workflow_dispatch:
 
+# jobs字段，表示要执行的一项或多项任务。
 jobs:
   docs:
+    # runs-on字段，指定运行所需要的虚拟机环境。（必填字段）
     runs-on: ubuntu-latest
 
+    # steps字段，指定每个 Job 的运行步骤，可以包含一个或多个步骤。
     steps:
       - uses: actions/checkout@v2
         with:
@@ -48,7 +53,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}  # 在 GitHub 上创建个人访问令牌 ACCESS_TOKEN
           # 部署到 gh-pages 分支
           BRANCH: gh-pages
           # 部署目录为 VuePress 的默认输出目录

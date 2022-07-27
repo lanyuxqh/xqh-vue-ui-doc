@@ -2,7 +2,7 @@ module.exports = {
   title: 'xqh-vue-ui',
   description: 'xqh-vue-ui 是一款轻量、好用的 Vue 组件库',
   base: '/xqh-vue-ui-doc/',
-  // dest: './build', // 设置输出目录
+  // dest: './docs/.vuepress/build', // 设置输出目录
   port: 1234,
   head: [['link', { rel: 'icon', href: 'logo.png' }]],
   themeConfig: {
@@ -17,32 +17,32 @@ module.exports = {
       },
       {
         text: '总结',
-        link: '/conclusion/需求分析'
+        link: '/conclusion/组件设计与开发'
       },
-      {
-        text: '其他插件',
-        link: '/plugins/todo'
-      },
-      {
-        text: '友链',
-        items: [
-          {
-            text: '我的博客',
-            link: '',
-            target: '_blank'
-          },
-          {
-            text: '我的掘金',
-            link: '',
-            target: '_blank'
-          }
-        ]
-      },
-      {
-        text: 'Github',
-        link: 'https://github.com/lanyuxqh/xqh-vue-ui',
-        target: '_blank'
-      }
+      // {
+      //   text: '其他插件',
+      //   link: '/plugins/todo'
+      // },
+      // {
+      //   text: '友链',
+      //   items: [
+      //     {
+      //       text: '我的博客',
+      //       link: '',
+      //       target: '_blank'
+      //     },
+      //     {
+      //       text: '我的掘金',
+      //       link: '',
+      //       target: '_blank'
+      //     }
+      //   ]
+      // },
+      // {
+      //   text: 'Github',
+      //   link: 'https://github.com/lanyuxqh/xqh-vue-ui',
+      //   target: '_blank'
+      // }
     ],
     sidebar: {
       '/components': [
@@ -118,7 +118,13 @@ module.exports = {
         {
           title: '总结',
           collapsable: false,
-          children: ['/conclusion/需求分析', '/conclusion/设计原则']
+          children: [
+            '/conclusion/组件设计与开发',
+            '/conclusion/单元测试',
+            '/conclusion/文档搭建',
+            '/conclusion/npm包发布',
+            '/conclusion/文档部署',
+          ]
         }
       ]
     }
