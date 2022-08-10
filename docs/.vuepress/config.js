@@ -124,6 +124,7 @@ module.exports = {
             '/conclusion/文档搭建',
             '/conclusion/npm包发布',
             '/conclusion/文档部署',
+            '/conclusion/组件按需引入',
           ]
         }
       ]

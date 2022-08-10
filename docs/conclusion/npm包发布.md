@@ -14,7 +14,7 @@
     }
     ```
 
-2. 配置 `.npmignore` 文件
+2. 配置 `.npmignore` 文件，设置忽略发布文件
 
    ```
    src/
@@ -29,7 +29,7 @@
    jsconfig.json
    ```
 
-3. 配置 `package.json` 文件
+3. 配置 `package.json` 文件中发布到 npm 的字段
 
    - name：发布到 npm 上的包名，也是安装时的包名。需要保证它的唯一性，可以到 npm 上先搜索一下，是否已经存在。
 
